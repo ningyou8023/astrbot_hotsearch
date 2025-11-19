@@ -1,0 +1,219 @@
+{
+  "api_key": {
+    "description": "全局API密钥",
+    "type": "string",
+    "hint": "统一密钥，所有接口共享",
+    "default": ""
+  },
+  "enable_douyin": {
+    "description": "开启或关闭抖音热搜",
+    "type": "bool",
+    "default": true
+  },
+  "douyin_api": {
+    "description": "抖音热搜API",
+    "type": "string",
+    "hint": "使用 https://api.nycnm.cn/API/douyinrs.php 接口，参数 ?format=json/text/image",
+    "obvious_hint": true,
+    "default": "https://api.nycnm.cn/API/douyinrs.php"
+  },
+  "douyin_format": {
+    "description": "抖音接口返回格式",
+    "type": "string",
+    "hint": "支持 json/text/image 三种",
+    "options": ["json", "text", "image"],
+    "default": "image"
+  },
+  "enable_xhs": {
+    "description": "开启或关闭小红书热搜",
+    "type": "bool",
+    "default": true
+  },
+  "xhs_api": {
+    "description": "小红书热搜API",
+    "type": "string",
+    "hint": "使用 https://api.nycnm.cn/API/xhsrs.php 接口，参数 ?format=json/text/image",
+    "obvious_hint": true,
+    "default": "https://api.nycnm.cn/API/xhsrs.php"
+  },
+  "xhs_format": {
+    "description": "小红书接口返回格式",
+    "type": "string",
+    "hint": "支持 json/text/image 三种",
+    "options": ["json", "text", "image"],
+    "default": "image"
+  },
+  "enable_zhihu": {
+    "description": "开启或关闭知乎热搜",
+    "type": "bool",
+    "default": true
+  },
+  "zhihu_api": {
+    "description": "知乎热搜API",
+    "type": "string",
+    "hint": "使用 https://api.nycnm.cn/API/zhihu.php 接口，参数 ?format=json/text/image",
+    "obvious_hint": true,
+    "default": "https://api.nycnm.cn/API/zhihu.php"
+  },
+  "zhihu_format": {
+    "description": "知乎接口返回格式",
+    "type": "string",
+    "hint": "支持 json/text/image 三种",
+    "options": ["json", "text", "image"],
+    "default": "image"
+  }
+  ,
+  "enable_weibo": {
+    "description": "开启或关闭微博热搜",
+    "type": "bool",
+    "default": true
+  },
+  "weibo_api": {
+    "description": "微博热搜API",
+    "type": "string",
+    "hint": "使用 https://api.nycnm.cn/API/wb.php 接口，参数 ?format=json/text/image",
+    "obvious_hint": true,
+    "default": "https://api.nycnm.cn/API/wb.php"
+  },
+  "weibo_format": {
+    "description": "微博接口返回格式",
+    "type": "string",
+    "hint": "支持 json/text/image 三种",
+    "options": ["json", "text", "image"],
+    "default": "image"
+  }
+  ,
+  "enable_baidu": {
+    "description": "开启或关闭百度热搜",
+    "type": "bool",
+    "default": true
+  },
+  "baidu_api": {
+    "description": "百度热搜API",
+    "type": "string",
+    "hint": "使用 https://api.nycnm.cn/API/baidu.php 接口，参数 ?type=hot&format=json/text/image",
+    "obvious_hint": true,
+    "default": "https://api.nycnm.cn/API/baidu.php"
+  },
+  "baidu_type": {
+    "description": "百度榜单类型",
+    "type": "string",
+    "hint": "hot|teleplay（电视剧）|tieba（贴吧）",
+    "options": ["hot", "teleplay", "tieba"],
+    "default": "hot"
+  },
+  "baidu_format": {
+    "description": "百度接口返回格式",
+    "type": "string",
+    "hint": "支持 json/text/image 三种",
+    "options": ["json", "text", "image"],
+    "default": "image"
+  }
+  ,
+  "enable_dcd": {
+    "description": "开启或关闭懂车帝热搜",
+    "type": "bool",
+    "default": true
+  },
+  "dcd_api": {
+    "description": "懂车帝热搜API",
+    "type": "string",
+    "hint": "使用 https://api.nycnm.cn/API/dongchedi.php 接口，参数 ?format=json/text/image",
+    "obvious_hint": true,
+    "default": "https://api.nycnm.cn/API/dongchedi.php"
+  },
+  "dcd_format": {
+    "description": "懂车帝接口返回格式",
+    "type": "string",
+    "hint": "支持 json/text/image 三种",
+    "options": ["json", "text", "image"],
+    "default": "image"
+  }
+  ,
+  "enable_bilibili": {
+    "description": "开启或关闭哔哩哔哩热搜",
+    "type": "bool",
+    "default": true
+  },
+  "bilibili_api": {
+    "description": "哔哩哔哩热搜API",
+    "type": "string",
+    "hint": "使用 https://api.nycnm.cn/API/bilibilirs.php 接口，参数 ?format=json/text/image",
+    "obvious_hint": true,
+    "default": "https://api.nycnm.cn/API/bilibilirs.php"
+  },
+  "bilibili_format": {
+    "description": "哔哩哔哩接口返回格式",
+    "type": "string",
+    "hint": "支持 json/text/image 三种",
+    "options": ["json", "text", "image"],
+    "default": "image"
+  }
+  ,
+  "enable_toutiao": {
+    "description": "开启或关闭头条热搜",
+    "type": "bool",
+    "default": true
+  },
+  "toutiao_api": {
+    "description": "头条热搜API",
+    "type": "string",
+    "hint": "使用 https://api.nycnm.cn/API/toutiao.php 接口，参数 ?format=json/text/image",
+    "obvious_hint": true,
+    "default": "https://api.nycnm.cn/API/toutiao.php"
+  },
+  "toutiao_format": {
+    "description": "头条接口返回格式",
+    "type": "string",
+    "hint": "支持 json/text/image 三种",
+    "options": ["json", "text", "image"],
+    "default": "image"
+  }
+  ,
+  "enable_tencent": {
+    "description": "开启或关闭腾讯热搜",
+    "type": "bool",
+    "default": true
+  },
+  "tencent_api": {
+    "description": "腾讯热搜API",
+    "type": "string",
+    "hint": "使用 https://api.nycnm.cn/API/txxw.php 接口，参数 ?type=json/text/image",
+    "obvious_hint": true,
+    "default": "https://api.nycnm.cn/API/txxw.php"
+  },
+  "tencent_format": {
+    "description": "腾讯接口返回格式",
+    "type": "string",
+    "hint": "支持 json/text/image 三种",
+    "options": ["json", "text", "image"],
+    "default": "image"
+  }
+  ,
+  "enable_maoyan": {
+    "description": "开启或关闭猫眼票房",
+    "type": "bool",
+    "default": true
+  },
+  "maoyan_api": {
+    "description": "猫眼票房API",
+    "type": "string",
+    "hint": "使用 https://api.nycnm.cn/API/maoyan.php 接口，参数 ?type=movie&format=json/text/image",
+    "obvious_hint": true,
+    "default": "https://api.nycnm.cn/API/maoyan.php"
+  },
+  "maoyan_type": {
+    "description": "猫眼榜单类型",
+    "type": "string",
+    "hint": "movie(实时票房)/tv(电视收视率)/web(网播热度)/all(全球票房总榜)",
+    "options": ["movie", "tv", "web", "all"],
+    "default": "all"
+  },
+  "maoyan_format": {
+    "description": "猫眼接口返回格式",
+    "type": "string",
+    "hint": "支持 json/text/image 三种",
+    "options": ["json", "text", "image"],
+    "default": "image"
+  }
+}
