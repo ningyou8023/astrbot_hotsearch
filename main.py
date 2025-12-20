@@ -15,7 +15,7 @@ PLUGIN_DATA_DIR.mkdir(parents=True, exist_ok=True)
     "astrbot_hotsearch",
     "柠柚",
     "实时热搜聚合，支持抖音/小红书/知乎/微博/百度/懂车帝/哔哩哔哩/腾讯/头条/猫眼票房/夸克，输出图片或文本",
-    "1.0.1",
+    "1.0.2",
 )
 class HotSearchPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
@@ -33,6 +33,7 @@ class HotSearchPlugin(Star):
         self.quark_api = getattr(config, "quark_api", "https://api.nycnm.cn/API/quark.php")
 
         self.global_apikey = getattr(config, "api_key", "")
+        self.timeout = getattr(config, "timeout", 30)
         self.enable_douyin = getattr(config, "enable_douyin", True)
         self.enable_xhs = getattr(config, "enable_xhs", True)
         self.enable_zhihu = getattr(config, "enable_zhihu", True)
@@ -69,7 +70,7 @@ class HotSearchPlugin(Star):
                     if v is not None and v != "":
                         url += f"&{k}={v}"
             async with aiohttp.ClientSession() as session:
-                async with session.get(url, timeout=aiohttp.ClientTimeout(total=10)) as response:
+                async with session.get(url, timeout=self.timeout) as response:
                     ct = response.headers.get("Content-Type", "")
                     if fmt == "image" and response.status == 200:
                         data = await response.read()
